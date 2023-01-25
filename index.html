@@ -6,12 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <div>
-        <label for="G_N">Please input a number between 0-100 </label>
-        <input type="text" id ="G_N">
-        <botton onclick="GN()">Guess!!</botton>
-    </div>
+<body id="body">
+    <label for="">Name</label>
+    <input type="text" id="NameTxt" onchange="NameChange()" placeholder="" onfocus="FocusBox(this)" onblur="BlurBox(this)" style="margin-left:20px;"></br>
+    <br>
+    <label for="">Surname</label>
+    <input type="text" id="SurTxt" onchange="SurChange()" placeholder="" onfocus="FocusBox(this)" onblur="BlurBox(this)"></br>
+    <br>
+    <label for="">Date of birth</label></br>
+    <br>
+    <input type="date" id="birthday" onchange="selectBirthday()">
+    <div id="result"></div></br>
+    <label for="">Select your language</label>
+    <select name="" id="menu">
+        <option value="">--Select--</option>
+        <option value="C">C</option>
+        <option value="Java">Java</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+    </select></br>
+    <br>
+    <button onclick="DataDisplay()">Submit</button>
+    <p id="Display"></p>
     <script src="Example.js"></script>
 </body>
 </html>

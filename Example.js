@@ -1,17 +1,31 @@
-let randNum =Math.floor(Math.random()*101);
-total = 0;
-function GN(){
-    const Guess_Number = document.getElementById('G_N').value;
-    if (Guess_Number == randNum){
-        alert("ถูกต้อง ค่าที่ถูกต้องคือ : "+ randNum +"คุณทายไปทั้งหมด :"+(total+1)+" ครั้ง")
-    }
-    else if(Guess_Number > randNum){
-        alert("มากกว่า")
-    }
-    else if(Guess_Number < randNum){
-        alert("น้อยกว่า")
-    }else{
-        None ;
-    }
-    total += 1;
+NameTxt =document.getElementById('NameTxt').value;
+SurTxt =document.getElementById('SurTxt').value;
+function NameChange(val){
+    NameTxt =document.getElementById('NameTxt').value;
+}
+function SurChange(val){
+    SurTxt =document.getElementById('SurTxt').value;
+}
+function FocusBox(NameTxt){
+    NameTxt.style.background = "yellow";
+}
+function BlurBox(NameTxt){
+    NameTxt.style.background = "white";
+}
+function selectBirthday() {
+    var birthday = document.getElementById("birthday").value;
+    console.log(birthday)
+}
+const selected = document.getElementById('menu');
+const selectedTxt = document.getElementById('Selected');
+
+menu.addEventListener('change',DataDisplay);
+
+function DataDisplay(){
+    Data = document.getElementById('Display');
+    console.log(NameTxt)
+    if(NameTxt == ""){
+        Data.innerText= "InsertName";
+    }else
+        Data.innerText = NameTxt ;
 }
